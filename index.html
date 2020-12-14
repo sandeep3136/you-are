@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <title>You Are</title>
+    <style>
+        body {
+            background-image: url("bg.jpeg");
+        }
+        #title-box {
+            padding-top: 5px;
+            background-color: darkslategrey;
+            height: 60px;
+            
+        }
+
+        #main-box {
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid black;
+            opacity: 0.6;
+        }
+
+        p {
+            font-weight: bold;
+            color: #000000;
+            font-size: 200%;
+        }
+
+        #enter-name {
+            margin: 14px;
+        }
+        
+        #enter {
+            background-color: #000000;
+            color: #ffffff;
+        }
+     
+
+        #name-field {
+            font-size: 100px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-align: center;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="title-box">
+        <h1>You Are</h1>
+    </div>
+    
+    <div class="container" id="main-box">
+        <div >
+            <input id="enter-name" type="text" placeholder="Enter your name">
+            <button id="enter">Enter</button>
+            <h3 id="name-field"></h3>
+            <br>
+            <p id="about-para"></p>
+        </div>
+    </div>
+
+    <script>
+        quotes = [ 'You are really nice, loud and sociable. You will be there for your friends no matter what. You are the person, who can change the world around you. You are a good listener and will give good advices to needy ones.',
+        'You have a lot of talent in arts and sports person. You are unique and one of a kind person. You are funny, savage and too perfect to describe. You are full of energy and cool person.',
+        'You are the best! Everyone likes you for being you. You are not really insecure but quite protective sometimes. You are sweet, sensitive and wonderful soul. You are kind of one in million.',
+        'You are smart, funny and beautiful person. People feel lucky to have you. You are such a gem, who holds your people close. You are an amazing person, who tries new things and good at them too.',
+        'You are dutiful and open minded. You are sweet and strong person, who radiates happiness. You are smart, caring, logical, understanding and loyal to people and wont  back stab anyone. ',
+        'You are good looking, polite, and just all round plain awesome person. You are the perfectionist. You try to do anything for your friends.  You are smart, loving and knowledgeable person.',
+        'You can do whatever you want, if you put your heart in it. You are not a quitter, that means you dont give up things easily. Loves to party and have fun and can make everybody smile around you.',
+        'You are very rare though. You are usually a very sweet person and protective when comes to your friends. Smart and out to prove the world wrong. You are intelligent, funny and overall amazing person.',
+        'You are really funny and sarcastic but really sweet and kindhearted at the same time. You can talk to basically anyone for hours and never get bored easily. Helps everyone, great friend and crazy about many things.',
+        'You are playful and fun, but has a serious side. A true legend.  A person with big heart. You have a great taste in fashion. You are a awesome person, who is well rounded and can do good at everything.'
+        ]
+        function generate() {
+            nf.textContent = en.value;
+            ap.innerHTML = quotes[Math.floor(Math.random() * quotes.length)];
+
+        }
+        const en = document.querySelector("#enter-name");
+        const nf = document.querySelector("#name-field");
+        const ap = document.querySelector("#about-para");
+        const btn = document.querySelector("#enter");
+        btn.addEventListener("click", generate, false);
+
+        
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>
